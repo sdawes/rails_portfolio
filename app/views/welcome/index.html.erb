@@ -1,0 +1,42 @@
+<div class="wrapper wrapper_padding clearfix">
+    <div class="col-1 about homepage_content">
+        <h2>About</h2>
+        <hr>
+        <p>
+            I've just graduated from one of Europe's leading coding boot camps -
+            <a href="#">Makers Academy</a>, in London. I aspire to become a full stack junior developer.
+        </p>
+        <p>
+            This is a portfolio blog I designed in Rails, in order to highlight some of my web development projects and graphic design.
+        </p>
+    </div>
+    <div class="col-2 homepage_content">
+        <h2>Web Development</h2>
+        <hr>
+
+        <% @posts.each do |post| %>
+        <h3>
+            <a href="#"><%= link_to post.title, post %></a>
+        </h3>
+        <p class="date"><%= post.created_at.strftime("%A, %b %d")%></p>
+        <% end %>
+
+        
+    </div>
+    <div class="col-3 homepage_content">
+        <h2>Graphic Design</h2>
+        <hr>
+        <h3>
+            <a href="#">Wedding Stationary</a>
+        </h3>
+        <p class="description">
+            This is a collection of wedding stationary I designed for family and friends weddings.
+        </p>
+        <h3>
+            <a href="#">RAF Summer Balls</a>
+        </h3>
+        <p class="description">
+            This is a collection of posters and publicity I designed for various RAF events during my previous career.
+        </p>
+    </div>
+</div>
