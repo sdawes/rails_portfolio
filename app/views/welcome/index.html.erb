@@ -1,6 +1,6 @@
 <div class="wrapper wrapper_padding clearfix">
     <div class="col-1 about homepage_content">
-        <h2>About</h2>
+        <h2>About Me</h2>
         <hr>
         <p>
             I've just graduated from one of Europe's leading coding boot camps -
@@ -11,7 +11,7 @@
         </p>
     </div>
     <div class="col-2 homepage_content">
-        <h2>Web Development</h2>
+        <h2>Latests Blog Posts</h2>
         <hr>
 
         <% @posts.each do |post| %>
@@ -21,22 +21,16 @@
         <p class="date"><%= post.created_at.strftime("%A, %b %d")%></p>
         <% end %>
 
-        
+
     </div>
     <div class="col-3 homepage_content">
-        <h2>Graphic Design</h2>
+        <h2>Latest Projects</h2>
         <hr>
+        <% @projects.each do |project| %>
         <h3>
-            <a href="#">Wedding Stationary</a>
+            <a href="#"><%= link_to project.title, project %></a>
         </h3>
-        <p class="description">
-            This is a collection of wedding stationary I designed for family and friends weddings.
-        </p>
-        <h3>
-            <a href="#">RAF Summer Balls</a>
-        </h3>
-        <p class="description">
-            This is a collection of posters and publicity I designed for various RAF events during my previous career.
-        </p>
+        <p class="date"><%= project.created_at.strftime("%A, %b %d")%></p>
+        <% end %>
     </div>
 </div>
