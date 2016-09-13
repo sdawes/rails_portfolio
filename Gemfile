@@ -17,6 +17,7 @@ gem 'friendly_id', '~> 5.1'
 gem 'will_paginate', '~> 3.1'
 gem 'mail_form'
 gem 'devise', '~> 4.2'
+gem 'paperclip', '~> 5.0.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
