@@ -41,6 +41,23 @@
   hr {
     margin: 2em auto;
   }
+  .image {
+    text-align: center;
+    // border: 1px solid lightblue;
+    width: 640px;
+    margin: 0 auto;
+    background-color: $border;
+  }
+  .caption {
+    width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1%;
+      p {
+        font-size: 0.8em;
+        color: $light;
+      }
+  }
 }
 
 #share_box {
