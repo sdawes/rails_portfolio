@@ -42,14 +42,11 @@
     margin: 2em auto;
   }
   .image {
-    text-align: center;
-    // border: 1px solid lightblue;
-    width: 640px;
+    display: block;
     margin: 0 auto;
-    background-color: $border;
+    max-width: 100%;
   }
   .caption {
-    width: 640px;
     margin: 0 auto;
     text-align: center;
     margin-top: 1%;
