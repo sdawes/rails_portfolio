@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.1'
 gem 'mail_form'
 gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.0.0'
+gem 'aws-sdk', '~> 2.6'
 
 group :development, :test do
   gem 'byebug', platform: :mri
