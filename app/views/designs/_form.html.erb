@@ -1,0 +1,24 @@
+<%= form_for @design do |f| %>
+  <% if @design.errors.any? %>
+    <h2><%= pluralize(@design.errors.count, "error") %> prevented this design from saving:</h2>
+    <ul>
+      <%= @design.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :img_name, "Image Name" %><br>
+  <%= f.text_field :img_name %>
+  <br>
+  <br>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
+  <br>
+  <br>
+  <%= f.label :caption %><br>
+  <%= f.text_field :caption %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
