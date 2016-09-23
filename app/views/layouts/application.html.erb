@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Steve Dawes - Web Developer / Graphic Designer </title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header id="main_navigation" class="clearfix">
+      <%= link_to "Steve Dawes", root_path, class: "name" %>
+      <nav>
+        <%= link_to "Blog Posts", posts_path %>
+        <%= link_to "Projects", projects_path %>
+        <%= link_to "Graphic Design", designs_path%>
+        <%= link_to "Contact", new_contact_path %>
+        <% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% end %>
+      </nav>
+    </header>
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
+    <%= yield %>
+
+    <footer id="main_footer">
+      <p class="copyright">
+        ©2016 Stephen Dawes
+      </p>
+      <nav>
+        <a href="http://twitter.com/st3vod" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="http://linkedin.com/in/srdawes" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="http://github.com/sdawes" target="_blank"><i class="fa fa-github"></i></a>
+      </nav>
+    </footer>
+
+  </body>
+</html>
