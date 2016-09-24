@@ -1,0 +1,39 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+    <header>
+        <p class="date"><%= @design.created_at.strftime("%A, %b %d") %></p>
+        <h1><%= @design.img_name %></h1>
+        <hr>
+    </header>
+          <%= image_tag @design.image.url(:large), class: "image" %>
+        <div class="caption">
+          <p><%= @design.caption %></p>
+        </div>
+
+    <% if user_signed_in? %>
+      <div id="admin_links">
+        <%= link_to "Edit Artwork", edit_design_path(@design) %>
+        <%= link_to "Delete Artwork", design_path(@design), method: :delete, data: {confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+
+    <hr>
+    <div id="share_box">
+        <p>Share
+            <%= @design.img_name %></p>
+        <!--  Twitter  -->
+        <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @design.img_name %> by @st3vod - &amp;url=<%= url_for([@design, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <!--  Facebook  -->
+        <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@design, {only_path: false}]) %>',  '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <!--  Google Plus  -->
+        <a onclick="javascript:window.open('http://plus.google.com/share?url=<%= url_for([@design, {only_path: false}]) %>',  '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class="fa fa-google-plus"></i>
+        </a>
+
+    </div>
+    <hr>
+
+</div>

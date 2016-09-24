@@ -1,4 +1,5 @@
 class Design < ApplicationRecord
+  attr_accessor :slug
   extend FriendlyId
   friendly_id :img_name, use: [:slugged, :finders]
   has_attached_file :image, styles: {
