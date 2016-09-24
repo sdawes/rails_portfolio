@@ -1,6 +1,6 @@
 class Design < ApplicationRecord
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :finders]
+  friendly_id :img_name, use: [:slugged, :finders]
   has_attached_file :image, styles: {
   :thumb    => ['100x100#',  :jpg, :quality => 70],
   :preview  => ['480>',      :jpg, :quality => 70],
