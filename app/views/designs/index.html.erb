@@ -3,8 +3,10 @@
     <div class="design_container">
       <% @designs.each do |design| %>
       <div class="design">
-        <%= design.img_name %>
-        <a href="#"><%= link_to design.img_name, design %></a>
+        <p class="thumbnail_title"><%= design.img_name %></p>
+        <%= link_to design do %>
+          <%= image_tag design.image.url(:thumb)%>
+        <% end %>
       </div>
       <% end %>
     </div>

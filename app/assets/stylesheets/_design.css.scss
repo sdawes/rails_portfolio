@@ -1,6 +1,24 @@
 .design_container {
-  border: 1px solid purple;
+  // border: 1px solid purple;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 90%;
   margin: 0 auto;
   padding: 2em;
+}
+
+.design {
+  // border: 1px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  p {
+    margin: 0 0 .5em 0;
+  }
+}
+
+.thumbnail_title {
+
 }
