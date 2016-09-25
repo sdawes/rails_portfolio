@@ -1,7 +1,6 @@
 class DesignsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  
+
   def index
     @designs = Design.all.order("created_at desc")
   end
@@ -11,7 +10,7 @@ class DesignsController < ApplicationController
   end
 
   def create
-    @design = Design.new(post_params)
+    @design = Design.new(design_params)
 
     if @design.save
       redirect_to @design, notice: "Hellz yeah, Steve! Your artwork was successfully saved!"
@@ -21,13 +20,16 @@ class DesignsController < ApplicationController
   end
 
   def show
+    @design = Design.friendly.find(params[:id])
   end
 
   def edit
+    @design = Design.friendly.find(params[:id])
   end
 
   def update
-    if @design.update post_params
+    @design = Design.friendly.find(params[:id])
+    if @design.update design_params
       redirect_to @design, notice: "Huzzah! Your artwork was successfully saved!"
     else
       render 'edit'
@@ -35,17 +37,15 @@ class DesignsController < ApplicationController
   end
 
   def destroy
+    @design = Design.friendly.find(params[:id])
     @design.destroy
     redirect_to designs_path
   end
 
   private
 
-  def post_params
+  def design_params
     params.require(:design).permit(:img_name, :slug, :image, :caption)
   end
 
-  def find_post
-    @design = Design.friendly.find(params[:id])
-  end
 end

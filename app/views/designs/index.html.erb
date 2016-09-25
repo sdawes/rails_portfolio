@@ -1,11 +1,10 @@
 <h1 id="page_title">Graphic Design Portfolio</h1>
 
-    <div id="posts_wrapper" class="skinny_wrapper">
+    <div class="design_container">
       <% @designs.each do |design| %>
-      <div class="post">
-        <p class="date"><%= design.created_at.strftime('%A, %B, %d') %></p>
-        <h2><a href="#"><%= link_to design.img_name, design %></a></h2>
-        <hr>
+      <div class="design">
+        <%= design.img_name %>
+        <a href="#"><%= link_to design.img_name, design %></a>
       </div>
       <% end %>
     </div>
