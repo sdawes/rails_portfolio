@@ -15,14 +15,15 @@
     <header id="main_navigation" class="clearfix">
       <%= link_to "Steve Dawes", root_path, class: "name" %>
       <nav>
-        <%= link_to "Blog Posts", posts_path %>
-        <%= link_to "Projects", projects_path %>
-        <%= link_to "Graphic Design", designs_path%>
-        <%= link_to "Contact", new_contact_path %>
+        <%= link_to "Blog Posts", posts_path %><i class="fa fa-rss fa-lg"></i>
+        <%= link_to "Projects", projects_path %><i class="fa fa-book fa-lg"></i>
+        <%= link_to "Graphic Design", designs_path%><i class="fa fa-paint-brush fa-lg"></i>
+        <%= link_to "Contact", new_contact_path %><i class="fa fa-envelope fa-lg"></i>
         <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% end %>
       </nav>
+
     </header>
 
     <% if notice %>

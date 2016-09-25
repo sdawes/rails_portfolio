@@ -101,9 +101,15 @@ nav {
   a {
     color: $dark;
     text-decoration: none;
-    margin: 0 1em;
+    margin: 0 .2em;
     font-size: 1rem;
   }
+}
+
+.fa {
+  margin-right: .3em;
+  margin-left: .2em;
+  color: $highlight;
 }
 
 #page_title {
