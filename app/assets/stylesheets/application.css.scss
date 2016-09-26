@@ -2,7 +2,7 @@
 $dark: #424652;
 $light: #9a9da4;
 $white: #FFFFFF;
-$highlight: #8bc6db;
+$highlight: #294671;
 $border: #E9E9E9;
 
 * {
@@ -80,6 +80,8 @@ hr {
 }
 
 #main_navigation {
+  background: image-url('nav_background.jpg') no-repeat;
+  background-size: cover;
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
   .name {
@@ -87,7 +89,7 @@ hr {
     font-size: 0.8em;
     letter-spacing: 4px;
     text-transform: uppercase;
-    border: 2px solid $border;
+    border: 2px solid white;
     padding: 1rem;
     text-decoration: none;
     color: $dark;
@@ -107,7 +109,7 @@ nav {
 }
 
 .fa {
-  margin-right: .3em;
+  margin-right: .5em;
   margin-left: .2em;
   color: $highlight;
 }
