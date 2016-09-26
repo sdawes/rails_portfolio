@@ -2,7 +2,7 @@
 $dark: #424652;
 $light: #9a9da4;
 $white: #FFFFFF;
-$highlight: #294671;
+$highlight: #34aedb;
 $border: #E9E9E9;
 
 * {
@@ -105,6 +105,9 @@ nav {
     text-decoration: none;
     margin: 0 .2em;
     font-size: 1rem;
+    &:hover {
+      color: $highlight;
+    }
   }
 }
 
