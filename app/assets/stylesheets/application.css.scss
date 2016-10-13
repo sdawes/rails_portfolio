@@ -2,7 +2,7 @@
 $dark: #424652;
 $light: #9a9da4;
 $white: #FFFFFF;
-$highlight: #34aedb;
+$highlight: #124978;
 $border: #E9E9E9;
 
 * {
@@ -71,20 +71,25 @@ p, ul, ol {
 }
 
 hr {
-  width: 3em;
+  width: 30%;
   display: block;
-  height: 2px;
+  height: 1px;
   border: 0;
-  border-top: 2px solid $highlight;
+  border-top: 1px solid $light;
   margin: 2rem 0;
 }
 
 #main_navigation {
-  background: image-url('nav_background.jpg') no-repeat;
-  background-size: cover;
-  padding: 2.5em 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fce62f;
   border-bottom: 1px solid $border;
+  padding: 1rem;
   .name {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 0.8em;
     letter-spacing: 4px;
@@ -93,20 +98,19 @@ hr {
     padding: 1rem;
     text-decoration: none;
     color: $dark;
-    float: left;
   }
-}
-
-nav {
-  float: right;
-  padding-top: 0.9rem;
-  a {
-    color: $dark;
-    text-decoration: none;
-    margin: 0 .2em;
-    font-size: 1rem;
-    &:hover {
-      color: $highlight;
+  nav {
+    // border: 1px solid green;
+    padding: 1rem;
+    margin-top: .5rem;
+    a {
+      color: $dark;
+      text-decoration: none;
+      margin: 0 .2em;
+      font-size: 1rem;
+      &:hover {
+        color: $highlight;
+      }
     }
   }
 }
@@ -114,7 +118,7 @@ nav {
 .fa {
   margin-right: .5em;
   margin-left: .2em;
-  color: $highlight;
+  color: $dark;
 }
 
 #page_title {
