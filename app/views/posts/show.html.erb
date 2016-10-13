@@ -4,7 +4,7 @@
         <h1><%= @post.title %></h1>
         <hr>
     </header>
-          <%= image_tag @post.image.url(:large), class: "image" %>
+          <%= image_tag @post.image.url(:preview), class: "image" %>
         <div class="caption">
           <p><%= @post.caption %></p>
         </div>
