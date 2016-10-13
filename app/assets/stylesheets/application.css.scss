@@ -88,14 +88,14 @@ hr {
   border-bottom: 1px solid $border;
   padding: 1rem;
   .name {
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 1em;
     letter-spacing: 4px;
     text-transform: uppercase;
     border: 2px solid white;
-    padding: 1rem;
+    padding: 1.2rem;
     text-decoration: none;
     color: $dark;
   }
@@ -131,7 +131,7 @@ hr {
 }
 
 #main_footer {
-  padding: 2.5em 5%;
+  padding: 1.8em 5%;
   border-top: 1px solid $border;
   .copyright {
     float: left;
