@@ -11,6 +11,8 @@ $border: #E9E9E9;
 
 body {
   font-family: 'Raleway', sans-serif;
+  background: image-url('giftly.png') repeat;
+  // background-size: cover;
 }
 
 .clearfix:before,
@@ -84,8 +86,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fce62f;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $light;
   padding: 1rem;
   .name {
     margin-top: 25px;
@@ -132,7 +133,7 @@ hr {
 
 #main_footer {
   padding: 1.8em 5%;
-  border-top: 1px solid $border;
+  border-top: 1px solid $light;
   .copyright {
     float: left;
     font-size: 0.9em;
